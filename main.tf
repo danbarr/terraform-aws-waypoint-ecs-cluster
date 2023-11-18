@@ -11,6 +11,13 @@ terraform {
 
 provider "aws" {
   region = var.region
+
+  default_tags {
+    tags = {
+      managed_by = "HCP Waypoint"
+      project    = var.waypoint_project
+    }
+  }
 }
 
 resource "aws_ecs_cluster" "this" {
