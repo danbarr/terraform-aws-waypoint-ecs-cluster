@@ -15,13 +15,13 @@ provider "aws" {
   default_tags {
     tags = {
       managed_by = "HCP Waypoint"
-      project    = var.waypoint_project
+      application    = var.waypoint_application
     }
   }
 }
 
 resource "aws_ecs_cluster" "this" {
-  name = "${var.waypoint_project}-cluster"
+  name = "${var.waypoint_application}-cluster"
 
   setting {
     name  = "containerInsights"

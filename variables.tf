@@ -1,11 +1,11 @@
-variable "waypoint_project" {
+variable "waypoint_application" {
   type        = string
-  description = "Name of the Waypoint project which will be used to build the cluster name."
+  description = "Name of the Waypoint application which will be used to build the cluster name."
   nullable    = false
 
   validation {
-    condition     = length(var.waypoint_project) <= 247 && can(regex("[a-zA-Z0-9_-]+", var.waypoint_project))
-    error_message = "The waypoint_project must be up to 247 letters, numbers, hyphens, and underscores."
+    condition     = length(var.waypoint_application) <= 247 && can(regex("[a-zA-Z0-9_-]+", var.waypoint_application))
+    error_message = "The waypoint_application must be up to 247 letters, numbers, hyphens, and underscores."
   }
 }
 
