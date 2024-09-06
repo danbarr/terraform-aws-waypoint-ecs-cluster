@@ -18,10 +18,6 @@ Enabled for Terraform Cloud [no-code provisioning](https://developer.hashicorp.c
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.2 |
 
-## Modules
-
-No modules.
-
 ## Resources
 
 | Name | Type |
@@ -33,10 +29,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_region"></a> [region](#input\_region) | The region where the resources are created. | `string` | n/a | yes |
+| <a name="input_waypoint_application"></a> [waypoint\_application](#input\_waypoint\_application) | Name of the Waypoint application which will be used to build the cluster name. | `string` | n/a | yes |
 | <a name="input_container_insights"></a> [container\_insights](#input\_container\_insights) | Whether to enable CloudWatch Container Insights. | `bool` | `false` | no |
 | <a name="input_default_capacity_provider"></a> [default\_capacity\_provider](#input\_default\_capacity\_provider) | Capacity provider to use by default. Valid values are FARGATE and FARGATE\_SPOT. | `string` | `"FARGATE"` | no |
-| <a name="input_region"></a> [region](#input\_region) | The region where the resources are created. | `string` | n/a | yes |
-| <a name="input_waypoint_project"></a> [waypoint\_project](#input\_waypoint\_project) | Name of the Waypoint project which will be used to build the cluster name. | `string` | n/a | yes |
 
 ## Outputs
 
